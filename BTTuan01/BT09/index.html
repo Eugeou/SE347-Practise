@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Thông Tin Việc Làm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            text-align: center;
+            color: green;
+        }
+        table {
+            margin: 0 auto;
+            width: 60%;
+            border-collapse: collapse;
+        }
+        th {
+            text-align: left;
+            background-color: green;
+            color: white;
+            padding: 8px;
+        }
+        td {
+            padding: 10px;
+        }
+        .input-field {
+            width: 100%;
+        }
+        .input-textarea {
+            width: 100%;
+            height: 80px;
+        }
+        .input-small {
+            width: 50%;
+        }
+        .input-medium {
+            width: 70%;
+        }
+        .submit-buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>ĐĂNG KÝ THÔNG TIN VIỆC LÀM</h2>
+
+    <form>
+        <!-- Personal Information -->
+        <table>
+            <tr>
+                <th colspan="2">Thông tin cá nhân</th>
+            </tr>
+            <tr>
+                <td>* Họ & tên:</td>
+                <td><input class="input-field" type="text" name="fullName" required></td>
+            </tr>
+            <tr>
+                <td>* Ngày tháng năm sinh:</td>
+                <td><input class="input-field" type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính:</td>
+                <td>
+                    <select name="gender" class="input-small">
+                        <option value="nam">Nam</option>
+                        <option value="nu">Nữ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Tình trạng hôn nhân:</td>
+                <td>
+                    <select name="maritalStatus" class="input-small">
+                        <option value="doc than">Độc thân</option>
+                        <option value="ket hon">Kết hôn</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Contact Information -->
+            <tr>
+                <th colspan="2">Thông tin liên lạc</th>
+            </tr>
+            <tr>
+                <td>* Tỉnh/Thành phố:</td>
+                <td><input class="input-field" type="text" name="city" required></td>
+            </tr>
+            <tr>
+                <td>Số điện thoại:</td>
+                <td><input class="input-medium" type="text" name="phone"></td>
+            </tr>
+            <tr>
+                <td>Số điện thoại di động:</td>
+                <td><input class="input-medium" type="text" name="mobile"></td>
+            </tr>
+            <tr>
+                <td>* Email:</td>
+                <td><input class="input-field" type="email" name="email" required></td>
+            </tr>
+
+            <!-- Education Information -->
+            <tr>
+                <th colspan="2">Trình độ học vấn</th>
+            </tr>
+            <tr>
+                <td>* Trình độ học vấn:</td>
+                <td>
+                    <select name="educationLevel" class="input-small" required>
+                        <option value="chon">Chọn</option>
+                        <option value="dai hoc">Đại học</option>
+                        <option value="cao dang">Cao đẳng</option>
+                        <option value="khac">Khác</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>* Thông tin về học vấn:</td>
+                <td><textarea name="educationInfo" class="input-textarea" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Ngoại ngữ:</td>
+                <td><textarea name="foreignLanguages" class="input-textarea"></textarea></td>
+            </tr>
+            <tr>
+                <td>Kỹ năng:</td>
+                <td><textarea name="skills" class="input-textarea"></textarea></td>
+            </tr>
+
+            <!-- Work Experience -->
+            <tr>
+                <th colspan="2">Kinh nghiệm làm việc</th>
+            </tr>
+            <tr>
+                <td>Số năm kinh nghiệm:</td>
+                <td><input class="input-small" type="number" name="yearsExperience"></td>
+            </tr>
+            <tr>
+                <td>Kinh nghiệm làm việc:</td>
+                <td><textarea name="workExperience" class="input-textarea"></textarea></td>
+            </tr>
+
+            <!-- Job Preference -->
+            <tr>
+                <th colspan="2">Mong muốn của bản thân</th>
+            </tr>
+            <tr>
+                <td>Việc làm mong muốn:</td>
+                <td><textarea name="desiredJob" class="input-textarea"></textarea></td>
+            </tr>
+            <tr>
+                <td>* Mức lương thỏa thuận:</td>
+                <td>
+                    <input class="input-small" type="number" name="desiredSalary" required> VND
+                </td>
+            </tr>
+
+            <!-- Submit & Reset -->
+            <tr>
+                <td colspan="2" class="submit-buttons
