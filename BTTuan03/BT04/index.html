@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 4: Tính tuổi</title>
+  <script>
+    function calculateAge() {
+      const currentYear = new Date().getFullYear();
+      let birthYear = prompt("Nhập năm sinh của bạn:");
+
+      while (!birthYear || isNaN(birthYear) || birthYear > currentYear) {
+        alert("Năm sinh không hợp lệ. Vui lòng nhập lại.");
+        birthYear = prompt("Nhập năm sinh của bạn:");
+      }
+
+      const age = currentYear - birthYear;
+      alert(`Tuổi của bạn là: ${age}`);
+    }
+  </script>
+</head>
+<body>
+  <h1>Bài 4: Tính tuổi</h1>
+  <button onclick="calculateAge()">Nhập năm sinh</button>
+</body>
+</html>

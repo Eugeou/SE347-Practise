@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gửi Email</title>
+  <script>
+    function sendEmail() {
+      // Lấy email và subject từ người dùng
+      const recipient = prompt("Nhập địa chỉ email của người nhận:", "example@example.com");
+      if (!recipient) {
+        alert("Vui lòng nhập địa chỉ email.");
+        return;
+      }
+
+      const subject = prompt("Nhập tiêu đề của email:", "Không có tiêu đề");
+      if (subject === null) {
+        alert("Vui lòng nhập tiêu đề email.");
+        return;
+      }
+
+      // Xác nhận trước khi gửi email
+      const confirmSend = confirm(`Bạn có chắc chắn muốn gửi email đến ${recipient} với tiêu đề "${subject}" không?`);
+      if (confirmSend) {
+        // Chuyển hướng đến ứng dụng gửi mail
+        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}`;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <h1>Gửi Email</h1>
+    <!-- Link để gửi email -->
+    <a href="javascript:sendEmail()">Gửi Email tại đây!</a>
+    <br><br>
+    <!-- Button để gửi email -->
+    <input type="button" value="Gửi Email" onclick="sendEmail()">
+  </div>
+</body>
+</html>
